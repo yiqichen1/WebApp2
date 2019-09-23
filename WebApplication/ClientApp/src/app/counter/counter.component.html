@@ -1,0 +1,25 @@
+<h1>Join the Aries Team!</h1>
+
+<p>If you would like to join the team, please submit your first name and email.</p>
+
+<form>
+    <div class ="form-group">
+        <label for ="addFirstName"> First Name </label>
+        <input ngModel name="addFirstName" #addFirstName="ngModel" id = "addFirstName" class = "form-control">
+    </div>
+    <div class = "form-group">
+        <label for ="addEmail"> Email Address </label>
+        <input ngModel name="addEmail" #addEmail="ngModel" id ="addEmail" type="text" class = "form-control"/>
+    </div>
+    <button (click)="onClick(addFirstName.value, addEmail.value)">ADD MEMBER</button>
+</form>
+<br>
+<br>
+<p> If you would like to remove someone from the list, please enter first name of person to delete</p>
+<form> 
+    <div class = "form-group">
+    <label for = "removeFirstName">First Name</label>
+    <input ngModel name="removeFirstName" id = "removeFirstName" #removeFirstName="ngModel" type ="text" class = "form-control"/>
+    </div>
+    <button (click)="onClickDelete(removeFirstName.value)">DELETE</button>
+</form>

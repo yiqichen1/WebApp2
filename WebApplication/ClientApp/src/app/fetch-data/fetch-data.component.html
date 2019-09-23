@@ -1,0 +1,20 @@
+<h1>Aries Team</h1>
+
+<p>Below is everyone in Aries!</p>
+
+<p *ngIf="!members"><em>Loading...</em></p>
+
+<table class='table' *ngIf="members">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let teamMember of members">
+      <td>{{ teamMember.firstName }}</td>
+      <td>{{ teamMember.email }}</td>
+    </tr>
+  </tbody>
+</table>
